@@ -1,22 +1,23 @@
-(ns leiningen.new.clj_service
+(ns leiningen.new.clj-service
+    (:require [clojure.string :refer [join split]])
     (:use
       [leiningen.new.templates :only [renderer sanitize year ->files]]))
 
 (defn user-prompt
   "Gets input from stdin and applies parse-fn function to it
    and returns the result"
-  [msg & {:keys [parse-fn] :or {parse-fn identity}}]
+  [msg]
   (println msg)
-    (-> (read-line) parse-fn))
+  (read-line))
 
-(defn tcc-clj-svc
+(defn clj-service
   "Create a template for a new service"
   [name]
   (let [root-path (user-prompt "What should be the root directory? (For e.g. passing com/sdslabs will generate everything in src/com/sdslabs):")
-        port (user-prompt "What should be the port number? (For e.g. 40464" :parse-fn (Integer/parseInt))
+        port (user-prompt "What should be the port number? (For e.g. 40464")
         data {:name name
               :root root-path
-              :dot-root (join "." (split root-path #"/"))
+              :dot-path (join "." (split root-path #"/"))
               :sanitized (sanitize name)
               :port port
               :year (year)}
