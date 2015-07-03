@@ -31,4 +31,4 @@
           ["test/{{root}}/test/{{sanitized}}/service.clj" (render "service_test.clj")]
           ["src/{{root}}/{{sanitized}}/resources.clj" (render "resources.clj")]
           ["resources/log4j.properties" (render "log4j.properties")])
-       (println (format "Success! Template for service %s created/" name))))
+       (println (format "Success! Template for service %s created" name))))

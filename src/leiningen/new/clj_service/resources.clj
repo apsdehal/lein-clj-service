@@ -8,7 +8,6 @@
   (GET*
     "/{{name}}"
     []
-    :new-relic-name "/v1/{{name}}"
     :summary "Dummy Route to index"
     :description
     "<p>Add a description here</p>"
