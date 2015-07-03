@@ -2,7 +2,7 @@
   (:require
     [ring.util.http-response :as http]
     [compojure.api.sweet :refer [defroutes* GET*]]
-    [com.climate.compojure.api.meta]))
+    [compojure.api.meta]))
 
 (defroutes* v1_routes
   (GET*

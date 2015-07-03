@@ -44,5 +44,7 @@
 
 (def main-handler
   (-> {{name}}-api
+      (wrap-with-logger)
+      (wrap-content-type)
       ;Add external middlewares here, these are called after the request handler
       ))
