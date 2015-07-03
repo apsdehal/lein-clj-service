@@ -35,11 +35,11 @@ Every service should have a unique port locally so that you can run more than on
 
 Your service consists of three functions:
 
-initialize!: Sets up the global state.
+__initialize!__: Sets up the global state.
 
-Handler function: Takes the request
+__Handler function__: Takes the request
 
-destroy: Destroys global state.
+__destroy__: Destroys global state.
 
 ## License
 
