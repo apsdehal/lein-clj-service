@@ -16,6 +16,7 @@
         port (user-prompt "What should be the port number? (For e.g. 40464" :parse-fn (Integer/parseInt))
         data {:name name
               :root root-path
+              :dot-root (join "." (split root-path #"/"))
               :sanitized (sanitize name)
               :port port
               :year (year)}
