@@ -34,8 +34,11 @@ Every service should have a unique port locally so that you can run more than on
 ## Service
 
 Your service consists of three functions:
+
 initialize!: Sets up the global state.
+
 Handler function: Takes the request
+
 destroy: Destroys global state.
 
 ## License
